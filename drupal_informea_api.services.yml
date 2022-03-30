@@ -1,0 +1,11 @@
+services:
+  serializer.normalizer.serialized:
+    class: Drupal\drupal_informea_api\Normalizer\DataNormalizer
+    tags:
+      - { name: normalizer }
+
+  serializer.normalizer.render:
+    class: Drupal\drupal_informea_api\Normalizer\RenderNormalizer
+    arguments: ['@renderer']
+    tags:
+      - { name: normalizer }
